@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { Fab, IconButton } from '@material-ui/core';
 import { PlayArrow, Pause, SkipNext, SkipPrevious } from '@material-ui/icons';
 
@@ -36,70 +36,114 @@ const songList = [
 
 
 function Player() {
+    const [autoplay,setAutoplay] = useState(0)
+
+    // const [currentSong, setCurrentSong] = useState(0)
+
+    const [isPlaying, setIsPlaying] = useState(false)
+
+    const [songDetails,setSongDetails] = useState({})
+
+    
+
+    useEffect(() => {
+       getSongDetails();
+    });
+
+    const getSongDetails = async()=>{
+        const link = 'https://www.youtube.com/oembed?url=https://youtu.be/FS9dkwhPypY&format=json'
+        const data = await fetch(link);
+        const items = await data.json();
+        var songImg = items.thumbnail_url;
+  
+        var songName = items.title
+   
+
+        setSongDetails({
+            'songImg' : songImg,
+            'songName' : songName
+        })
+
+
+    }
 
     const play = {
         animation: 'spin 7s linear infinite'
     }
 
-    const [currentSong, setCurrentSong] = useState(0)
+    
 
-    const [isPlaying, setIsPlaying] = useState(false)
+    
 
-    function playSong() {
+    // function playSong() {
 
-        const song = document.querySelector('#song')
+    //     const song = document.querySelector('#song')
 
-        if (isPlaying) {
-            song.pause()
-            setIsPlaying(false)
-        } else {
-            song.play()
+    //     if (isPlaying) {
+    //         song.pause()
+    //         setIsPlaying(false)
+    //     } else {
+    //         song.play()
+    //         setIsPlaying(true)
+    //     }
+
+    // }
+
+    function playSong(){
+        if(autoplay === 0){
             setIsPlaying(true)
+            setAutoplay(1)
+        }else{
+            setIsPlaying(false)
+            setAutoplay(0)
         }
-
     }
 
-    function nextSong(){
 
-        const song = document.querySelector('#song')
-        song.load()
-        setIsPlaying(false)
+   
+
+    // function nextSong(){
+
+    //     const song = document.querySelector('#song')
+    //     song.load()
+    //     setIsPlaying(false)
         
-        if(currentSong<songList.length-1){
-            setCurrentSong((prevValue)=>prevValue+1)
-        }
-    }
+    //     if(currentSong<songList.length-1){
+    //         setCurrentSong((prevValue)=>prevValue+1)
+    //     }
+    // }
 
-    function prevSong(){
+    // function prevSong(){
 
-        const song = document.querySelector('#song')
-        song.load()
-        setIsPlaying(false)
+    //     const song = document.querySelector('#song')
+    //     song.load()
+    //     setIsPlaying(false)
         
-        if(currentSong>0){
-            setCurrentSong((prevValue)=>prevValue-1)
-        }
-    }
+    //     if(currentSong>0){
+    //         setCurrentSong((prevValue)=>prevValue-1)
+    //     }
+    // }
+
+    
 
     return (
         <div className="bodyContent">
-            <div className='circleOne'></div>
+
+            <iframe title="yoyo" width="0" height="0" src={"https://www.youtube.com/embed/7dt9LvdSdIA?autoplay="+autoplay} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
             <div className="circleTwo"></div>
             <div className="PlayerCard">
-                <img className='songImg' style={isPlaying ? play : null} src={songList[currentSong].songImg} alt='demoImg' />
-                <h1>{songList[currentSong].songName}</h1>
-                <audio id='song'>
-                    <source src={songList[currentSong].songLink} />
-                </audio>
+                <img className='songImg' style={isPlaying ? play : null} src={songDetails.songImg} alt='demoImg' />
+                <h1>{songDetails.songName}</h1>
                 <div className='motionIcons'>
                     <IconButton aria-label="next" >
-                        <SkipPrevious onClick={prevSong}/>
+                        <SkipPrevious />
                     </IconButton>
                     <Fab aria-label="Play" className='play-button' onClick={playSong}>
                         {isPlaying ? <Pause /> : <PlayArrow />}
                     </Fab>
                     <IconButton aria-label="next" >
-                        <SkipNext onClick={nextSong}/>
+                        <SkipNext />
                     </IconButton>
                 </div>
             </div>

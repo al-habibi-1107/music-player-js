@@ -30,6 +30,10 @@
     border-radius: 10px;
 }
 
+.PlayerCard h1{
+    font-size: 16px;
+}
+
 .songImg{
     width: 50%;
     height: 50%;
