@@ -6,6 +6,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* background: radial-gradient(#A5FECB,#20BDFF,#5433FF); */
@@ -14,6 +15,47 @@
     background-image: url('../assets/bg.jpg');
     /* background: #514A9D; */
     /* background: #07102e; */
+}
+
+.input-area{
+    position: relative;
+    bottom: 50px;
+    display: flex;
+}
+
+.icon{
+    width: 20px;
+    background: rgba(255, 255, 255, 0.187);
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    padding-right: 3px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+input{
+    width: 300px;
+    height: 50px;
+    padding: 2px 5px 2px 9px ;
+    background: rgba(255, 255, 255, 0.187);
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    color: black;
 }
 
 .PlayerCard{
@@ -34,6 +76,7 @@
     font-size: 16px;
 }
 
+
 .songImg{
     width: 50%;
     height: 50%;
@@ -51,24 +94,5 @@
     bottom: 14px;
 }
 
-/* 
-.circleOne{
-    position: absolute;
-    bottom: 10px;
-    right: 13%;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: linear-gradient(#f857a6,#ff5858);
-}
-.circleTwo{
-    position: absolute;
-    top: 30px;
-    left: 25%;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
-} */
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
