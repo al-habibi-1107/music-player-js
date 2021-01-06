@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/music-player-js/static/css/main.27ca822b.chunk.css",
-    "main.js": "/music-player-js/static/js/main.4d37ab4e.chunk.js",
-    "main.js.map": "/music-player-js/static/js/main.4d37ab4e.chunk.js.map",
-    "runtime-main.js": "/music-player-js/static/js/runtime-main.8acc03cb.js",
-    "runtime-main.js.map": "/music-player-js/static/js/runtime-main.8acc03cb.js.map",
-    "static/js/2.b6a807ae.chunk.js": "/music-player-js/static/js/2.b6a807ae.chunk.js",
-    "static/js/2.b6a807ae.chunk.js.map": "/music-player-js/static/js/2.b6a807ae.chunk.js.map",
-    "static/js/3.ca208de9.chunk.js": "/music-player-js/static/js/3.ca208de9.chunk.js",
-    "static/js/3.ca208de9.chunk.js.map": "/music-player-js/static/js/3.ca208de9.chunk.js.map",
+    "main.css": "/music-player-js/static/css/main.604b70e5.chunk.css",
+    "main.js": "/music-player-js/static/js/main.3c6d5240.chunk.js",
+    "main.js.map": "/music-player-js/static/js/main.3c6d5240.chunk.js.map",
+    "runtime-main.js": "/music-player-js/static/js/runtime-main.5d93d81c.js",
+    "runtime-main.js.map": "/music-player-js/static/js/runtime-main.5d93d81c.js.map",
+    "static/js/2.1f6ad6ee.chunk.js": "/music-player-js/static/js/2.1f6ad6ee.chunk.js",
+    "static/js/2.1f6ad6ee.chunk.js.map": "/music-player-js/static/js/2.1f6ad6ee.chunk.js.map",
+    "static/js/3.74b44f97.chunk.js": "/music-player-js/static/js/3.74b44f97.chunk.js",
+    "static/js/3.74b44f97.chunk.js.map": "/music-player-js/static/js/3.74b44f97.chunk.js.map",
     "index.html": "/music-player-js/index.html",
-    "static/css/main.27ca822b.chunk.css.map": "/music-player-js/static/css/main.27ca822b.chunk.css.map",
-    "static/js/2.b6a807ae.chunk.js.LICENSE.txt": "/music-player-js/static/js/2.b6a807ae.chunk.js.LICENSE.txt",
+    "static/css/main.604b70e5.chunk.css.map": "/music-player-js/static/css/main.604b70e5.chunk.css.map",
+    "static/js/2.1f6ad6ee.chunk.js.LICENSE.txt": "/music-player-js/static/js/2.1f6ad6ee.chunk.js.LICENSE.txt",
     "static/media/player.css": "/music-player-js/static/media/Music4k.7df6f6d2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8acc03cb.js",
-    "static/js/2.b6a807ae.chunk.js",
-    "static/css/main.27ca822b.chunk.css",
-    "static/js/main.4d37ab4e.chunk.js"
+    "static/js/runtime-main.5d93d81c.js",
+    "static/js/2.1f6ad6ee.chunk.js",
+    "static/css/main.604b70e5.chunk.css",
+    "static/js/main.3c6d5240.chunk.js"
   ]
 }
