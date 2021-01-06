@@ -1,0 +1,10 @@
+.copyright-section{
+    margin-top: 50px;
+    width: 30%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.187);
+    box-shadow: 0 8px 32px 0 rgba(54, 54, 114, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+}

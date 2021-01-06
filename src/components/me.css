@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Staatliches&display=swap');
+
+.me-section{
+    height: 5vh;
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,#0f0c29,#302b63,#24243e);
+    font-family: 'Goldman', cursive;
+}
+
+.myLink{
+    margin-left:3px ;
+    text-decoration: underline;
+    color: #ffc0cb
+}

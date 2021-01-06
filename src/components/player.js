@@ -3,7 +3,9 @@ import { Fab, IconButton } from '@material-ui/core';
 import { PlayArrow, Pause, SkipNext, SkipPrevious } from '@material-ui/icons';
 
 
-import './player.css'
+import './player.css';
+import './copyright'
+import CopyrightSection from "./copyright";
 
 
 
@@ -18,6 +20,8 @@ function Player() {
     const [isPlaying, setIsPlaying] = useState(false)
 
     const [songID, setSongID] = useState("")
+
+    const [ytLink, setYTLink] = useState("Youtube.com")
 
 
     const playlist = []
@@ -81,6 +85,7 @@ function Player() {
     function getSongUsingLink() {
 
         const link = String(document.querySelector('#user-input').value);
+        setYTLink(link);
         if (link !== "") {
 
             const songId = link.substring(link.length - 11, link.length)
@@ -108,6 +113,7 @@ function Player() {
                 setIsSearched(true)
             }
         }
+        document.querySelector('#user-input').value = " ";
 
     }
 
@@ -136,6 +142,7 @@ function Player() {
                     </IconButton>
                 </div>
             </div>
+            <CopyrightSection ytLink={ytLink}/>
         </div>
     );
 
